@@ -229,6 +229,8 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     ],
     // Android release builds signed with the upload key from the environment (the Android build workflow).
     "./plugins/with-android-release-signing",
+    // Trust user-installed CA certificates (e.g. mkcert / private LAN CA) on Android release builds.
+    "./plugins/with-user-certs",
     // The app icons a person may pick (ADR 0179): iOS's alternate icons and Android's launcher aliases.
     "./plugins/with-app-icons",
     [
